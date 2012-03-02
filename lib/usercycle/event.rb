@@ -28,7 +28,7 @@ module Usercycle
       def create(identity, action, properties={})
         options = { :body => {
                     :identity => identity,
-                    :action => action,
+                    :action_name => action,
                     :properties => properties }}
         @client.class.post('/events.json', options)
       end
