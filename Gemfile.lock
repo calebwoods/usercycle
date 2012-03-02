@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    usercycle (0.0.2)
+    usercycle (0.1.0)
       httparty (>= 0.8.1)
 
 GEM
