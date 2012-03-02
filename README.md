@@ -28,10 +28,13 @@ identity = 'john.smith@example.com' #required
 ### Creating an event
 
 ```ruby
-identity = 'john.smith@example.com' #required
-action = 'signed_up' #required
-properties = { :first_name => 'John', :last_name => 'Smith' } #optional
-@client.event.create(identity, action, properties)
+@params = {
+  :identity => 'john.smith@example.com',
+  :action_name => 'signed_up',
+  :occurred_at => '2012-03-01 19:45:54 UTC', #optional
+  :properties => { :first_name => 'John', :last_name => 'Smith' } #optional
+}
+@client.event.create(@params)
 ```
 
 ## Full Documentation
