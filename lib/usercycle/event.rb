@@ -1,7 +1,5 @@
 module Usercycle
   module Event
-    class UnsupportedEvent < StandardError; end
-    SUPPORTED_EVENTS = %w[signed_up activated came_back upgraded downgraded billed referred referred_by canceled]
 
     def event
       @event ||= Event.new self
