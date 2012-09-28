@@ -30,7 +30,6 @@ module Usercycle
       #  @client.event.create(@params)
       #
       def create(params)
-        raise UnsupportedEvent unless SUPPORTED_EVENTS.include? params[:action_name].to_s
         options = { :body => params }
         @client.class.post('/events.json', options)
       end
